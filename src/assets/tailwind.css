@@ -7,4 +7,5 @@
 html,
 body {
   font-family: 'Noto Sans', sans-serif;
+  width: 100vw;
 }
