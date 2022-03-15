@@ -32,6 +32,7 @@
 import { ref, reactive } from 'vue'
 export default {
   setup() {
+    // TODO mobile 換頁效果還沒做
     const title = ref('Your Dream Destination: Be who you want to be')
     const commercials = reactive([
       {
