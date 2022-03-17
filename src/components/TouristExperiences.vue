@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col rounded-2xl mx-6 my-6 max-w-[1280p] pad:flex-row pad:items-center pad:h-[471px] pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 bg-[#f7f7f7]"
+    class="flex flex-col rounded-2xl mx-6 my-6 pad:flex-row pad:items-center pad:h-[471px] pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 desktop:max-w-[1280px] max:mx-auto bg-[#f7f7f7]"
   >
     <div
       class="bg-[url('https://i.pravatar.cc/600?img=5')] bg-no-repeat bg-cover rounded-t-2xl h-[216px] pad:rounded-l-2xl pad:rounded-tr-none pad:h-full pad:w-1/2"
