@@ -1,35 +1,51 @@
 <template>
-  <div
-    v-for="user in users"
-    :key="user.id"
-    :id="user.id"
-    class="flex flex-col rounded-2xl mx-6 my-6 pad:flex-row pad:items-center pad:h-[471px] pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 desktop:max-w-[1280px] max:mx-auto bg-[#f7f7f7]"
-  >
-    <div
-      :class="user.avatar"
-      class="bg-no-repeat bg-cover rounded-t-2xl h-[216px] pad:rounded-l-2xl pad:rounded-tr-none pad:h-full pad:w-1/2"
-    ></div>
-    <div class="flex flex-col px-16 py-10 pad:py-8 pad:w-1/2">
-      <div class="text-lg mb-4 text-black pad:text-2xl">
-        {{ '"' + user.text + '"' }}
+  <carousel>
+    <slide
+      v-for="user in users"
+      :key="user.id"
+      :id="user.id"
+      class="flex flex-col rounded-2xl mx-6 my-6 pad:flex-row pad:items-center pad:h-[471px] pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 desktop:max-w-[1280px] max:mx-auto bg-[#f7f7f7] relative"
+    >
+      <div
+        :class="user.avatar"
+        class="bg-no-repeat bg-cover rounded-t-2xl h-[216px] pad:rounded-l-2xl pad:rounded-tr-none pad:h-full pad:w-1/2"
+      ></div>
+      <div class="flex flex-col px-16 py-10 pad:py-8 pad:w-1/2">
+        <div class="text-lg mb-4 text-black pad:text-2xl">
+          {{ '"' + user.text + '"' }}
+        </div>
+        <div class="text-sm text-black pad:text-base">{{ user.name }}</div>
+        <div class="text-sm text-black mb-4 pad:text-base">{{ user.from }}</div>
+        <div class="font-semibold text-sm text-black">
+          <a
+            target="_blank"
+            class="cursor-pointer hover:underline hover:decoration-solid"
+            >See profile</a
+          >
+        </div>
       </div>
-      <div class="text-sm text-black pad:text-base">{{ user.name }}</div>
-      <div class="text-sm text-black mb-4 pad:text-base">{{ user.from }}</div>
-      <div class="font-semibold text-sm text-black">
-        <a
-          href=""
-          target="_blank"
-          class="cursor-pointer hover:underline hover:decoration-solid"
-          >See profile</a
-        >
-      </div>
-    </div>
-  </div>
+    </slide>
+
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </carousel>
 </template>
 
 <script>
 import { ref, reactive } from 'vue'
-export default {
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import './../assets/carousel.css'
+
+export default defineComponent({
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   setup() {
     const users = reactive([
       {
@@ -73,7 +89,5 @@ export default {
       users,
     }
   },
-}
+})
 </script>
-
-<style lang="postcss" scoped></style>
