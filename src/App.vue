@@ -2,6 +2,7 @@
   <Main />
   <SubCommercial />
   <TouristExperiences />
+  <Exploring />
   <Attractions />
   <Snacks />
   <Services />
@@ -13,6 +14,7 @@
 import Main from './components/Main.vue'
 import SubCommercial from './components/SubCommercial.vue'
 import TouristExperiences from './components/TouristExperiences.vue'
+import Exploring from './components/Exploring.vue'
 import Attractions from './components/Attractions.vue'
 import Snacks from './components/Snacks.vue'
 import Services from './components/Services.vue'

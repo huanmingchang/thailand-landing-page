@@ -1,0 +1,55 @@
+<template>
+  <div>
+    <div
+      class="max-w-[1280px] flex flex-col justify-evenly h-[544px] px-6 mb-6 mobile:h-[684px] pad:h-[464px] pad:px-10 pad:mx-10 pad:rounded-2xl max:mx-20 bg-[url('/public/IMG_1571.JPG')] bg-no-repeat bg-cover"
+    >
+      <div class="text-xs font-bold text-[#fff] pad:text-lg">
+        {{ slogan }}
+      </div>
+      <div
+        class="text-3xl font-bold text-[#fff] leading-[42px] mobile:max-w-[258px] pad:max-w-[466px] pad:text-[42px] pad:leading-[54.8px]"
+      >
+        {{ mainTitle }}
+      </div>
+      <div class="h-14">
+        <a :href="button.link" target="_blank" class="w-[90px] h-full">
+          <button
+            class="btn h-full py-4 px-8 rounded-lg bg-[#E61E4D] text-[#fff] cursor-pointer"
+          >
+            {{ button.text }}
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import { ref, reactive } from 'vue'
+export default {
+  setup() {
+    const slogan = ref('Amazing Thailand')
+    const mainTitle = ref('Exploring life, exploring possibilities')
+    const button = reactive({
+      text: 'Take me there!',
+      link: 'https://www.kkday.com/zh-tw/city/bangkok',
+    })
+
+    return {
+      slogan,
+      mainTitle,
+      button,
+    }
+  },
+}
+</script>
+
+<style lang="postcss" scoped>
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(1);
+  box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+</style>
