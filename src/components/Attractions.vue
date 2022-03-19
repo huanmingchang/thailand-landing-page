@@ -5,7 +5,7 @@
     <div class="text-[26px] text-[#222222] font-extrabold mb-6 pad:text-[42px]">
       Attractions
     </div>
-    <div class="flex flex-row justify-between bg-[#f7f7f7]">
+    <div class="flex flex-row justify-between">
       <Carousel :settings="settings" :breakpoints="breakpoints">
         <Slide
           v-for="attraction in attractions"
@@ -16,12 +16,12 @@
             <img
               :src="attraction.img"
               alt=""
-              class="w-[250px] h-[260px] rounded-lg"
+              class="w-[250px] h-[260px] rounded-lg shadow-md shadow-slate-300"
             />
           </div>
           <a :href="attraction.map" target="_blank">
             <div
-              class="text-lg text-[#222222] font-extrabold pad:text-xl hover:underline"
+              class="text-lg text-[#222222] font-extrabold mt-3 pad:text-xl hover:underline"
             >
               {{ attraction.name }}
             </div></a

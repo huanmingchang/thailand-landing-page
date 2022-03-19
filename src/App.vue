@@ -4,7 +4,7 @@
   <TouristExperiences />
   <Exploring />
   <Attractions />
-  <Snacks />
+  <Food />
   <Services />
   <EndingCommercial />
   <Footer />
@@ -16,7 +16,7 @@ import SubCommercial from './components/SubCommercial.vue'
 import TouristExperiences from './components/TouristExperiences.vue'
 import Exploring from './components/Exploring.vue'
 import Attractions from './components/Attractions.vue'
-import Snacks from './components/Snacks.vue'
+import Food from './components/Food.vue'
 import Services from './components/Services.vue'
 import EndingCommercial from './components/EndingCommercial.vue'
 import Footer from './components/Footer.vue'
