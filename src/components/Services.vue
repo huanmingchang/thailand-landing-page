@@ -41,7 +41,7 @@
 import { ref, reactive } from 'vue'
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
-import './../assets/carousel.css'
+import './../styles/carousel.css'
 
 export default defineComponent({
   components: {
