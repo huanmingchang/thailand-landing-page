@@ -96,7 +96,6 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .carousel {
-  margin: 0;
-  width: 100%;
+  @apply m-0 w-full;
 }
 </style>
