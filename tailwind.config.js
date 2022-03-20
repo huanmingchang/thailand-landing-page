@@ -5,7 +5,7 @@ module.exports = {
       'mobile': '374px',
       'pad': '743px',
       'desktop': '1128px',
-      'max': '1440px'
+      'max': '1440px',
     },
   },
   plugins: [],

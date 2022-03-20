@@ -29,16 +29,16 @@
 }
 :root {
   /* Color */
-  --vc-clr-primary: #000000;
+  --vc-clr-primary: #666666;
   --vc-clr-secondary: #e2e2e2;
-  --vc-clr-white: #ffffff;
+  --vc-clr-white: #c2c2c2;
 
   /* Icon */
   --vc-icn-width: 1.2em;
 
   /* Navigation */
   --vc-nav-width: 30px;
-  --vc-nav-color: #ffffff;
+  --vc-nav-color: #222222;
   --vc-nav-background-color: var(--vc-clr-primary);
 
   /* Pagination */
@@ -63,26 +63,6 @@
 .carousel {
   position: relative;
   box-sizing: border-box;
-  max-width: 1280px;
-  margin: 24px;
-}
-
-@media (min-width: 743px) {
-  .carousel {
-    margin: 32px 40px;
-  }
-}
-
-@media (min-width: 1128px) {
-  .carousel {
-    margin: 48px 80px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .carousel {
-    margin: 48px auto;
-  }
 }
 
 .carousel * {

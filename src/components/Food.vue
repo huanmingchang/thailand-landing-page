@@ -23,6 +23,10 @@
             {{ food.name }}
           </div>
         </Slide>
+
+        <template #addons>
+          <Navigation />
+        </template>
       </Carousel>
     </div>
   </div>
