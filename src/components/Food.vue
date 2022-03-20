@@ -72,42 +72,42 @@ export default defineComponent({
     const foodCollection = reactive([
       {
         id: 1,
-        img: '/public/27.jpg',
+        img: './public/27.jpg',
         name: 'Bua Loy Bingsu',
       },
       {
         id: 2,
-        img: '/public/31.jpg',
+        img: './public/31.jpg',
         name: 'Meatball',
       },
       {
         id: 3,
-        img: '/public/34.jpg',
+        img: './public/34.jpg',
         name: 'Seafood with coconut',
       },
       {
         id: 4,
-        img: '/public/39.jpg',
+        img: './public/39.jpg',
         name: 'Krapaw Moo',
       },
       {
         id: 5,
-        img: '/public/59.jpg',
+        img: './public/59.jpg',
         name: 'Kao Man Gai',
       },
       {
         id: 6,
-        img: '/public/60.jpg',
+        img: './public/60.jpg',
         name: 'Kai Luk Khey',
       },
       {
         id: 7,
-        img: '/public/62.jpg',
+        img: './public/62.jpg',
         name: 'Chim Chum',
       },
       {
         id: 8,
-        img: '/public/64.jpg',
+        img: './public/64.jpg',
         name: 'Moo Bing',
       },
     ])
