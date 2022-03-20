@@ -1,10 +1,14 @@
 <template>
-  <carousel>
-    <slide
+  <Carousel
+    class="mx-6 my-6 pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 desktop:max-w-[1280px] max:mx-auto"
+    :settings="settings"
+    :breakpoints="breakpoints"
+  >
+    <Slide
       v-for="user in users"
       :key="user.id"
       :id="user.id"
-      class="flex flex-col rounded-2xl mx-6 my-6 pad:flex-row pad:items-center pad:h-[471px] pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 desktop:max-w-[1280px] max:mx-auto bg-[#f7f7f7] relative"
+      class="flex flex-col rounded-2xl pad:flex-row pad:items-center pad:h-[471px] bg-[#f7f7f7] relative"
     >
       <div
         :class="user.avatar"
@@ -24,28 +28,33 @@
           >
         </div>
       </div>
-    </slide>
+    </Slide>
 
     <template #addons>
       <Navigation />
-      <Pagination />
     </template>
-  </carousel>
+  </Carousel>
 </template>
 
 <script>
 import { ref, reactive } from 'vue'
 import { defineComponent } from 'vue'
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import './../assets/carousel.css'
 
 export default defineComponent({
   components: {
     Carousel,
     Slide,
-    Pagination,
     Navigation,
   },
+  data: () => ({
+    // carousel settings
+    settings: {
+      itemsToShow: 1,
+      snapAlign: 'start',
+    },
+  }),
   setup() {
     const users = reactive([
       {
