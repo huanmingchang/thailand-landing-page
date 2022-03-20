@@ -1,38 +1,64 @@
 <template>
   <div
-    class="my-6 px-6 max-w-[313px] md:flex md:flex-col md:max-w-[100vw] md:my-8 md:px-10 lg:flex-row lg:items-center lg:justify-between lg:max-w-[1280px] lg:my-12 lg:px-20 lg:mx-auto"
+    class="mx-6 my-6 max-w-[313px] pad:flex pad:flex-col pad:mx-10 pad:my-8 pad:max-w-none desktop:flex-row desktop:items-center desktop:justify-between desktop:mx-20 desktop:my-12 max:max-w-[1280px] max:mx-auto"
   >
     <div
-      class="text-[#222222] font-semibold text-3xl mb-10 md:text-4xl md:max-w-[404px] lg:mb-0"
+      class="text-[#222222] font-semibold text-3xl mb-10 pad:text-4xl pad:max-w-[404px] desktop:mb-0"
     >
       {{ title }}
     </div>
-    <div
-      class="md:flex md:flex-row md:justify-between md:w-full lg:max-w-[717px]"
+    <Carousel
+      :settings="settings"
+      :breakpoints="breakpoints"
+      class="pad:flex pad:flex-row pad:justify-between pad:w-full desktop:max-w-[717px]"
     >
-      <div
-        class="md:w-1/2 md:mr-4 lg:max-w-[313px]"
+      <Slide
+        class="pad:w-1/2 pad:mr-20 desktop:max-w-[313px]"
         v-for="commercial in commercials"
         :key="commercial.id"
       >
         <div
-          class="text-[#333333] text-2xl font-semibold mb-4 md:max-w-[313px]"
+          class="text-[#333333] text-2xl font-semibold mb-4 pad:max-w-[313px]"
         >
           {{ commercial.subtitle }}
         </div>
-        <div class="text-[#484848] text-base md:max-w-[313px]">
+        <div class="text-[#484848] text-base pad:max-w-[313px]">
           {{ commercial.text }}
         </div>
-      </div>
-    </div>
+      </Slide>
+    </Carousel>
   </div>
 </template>
 
 <script>
 import { ref, reactive } from 'vue'
-export default {
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
+import './../assets/carousel.css'
+
+export default defineComponent({
+  components: {
+    Pagination,
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  data: () => ({
+    // carousel settings
+    settings: {
+      itemsToShow: 1,
+      snapAlign: 'center',
+    },
+    // breakpoints are mobile first
+    // any settings not specified will fallback to the carousel settings
+    breakpoints: {
+      743: {
+        itemsToShow: 2,
+        snapAlign: 'center',
+      },
+    },
+  }),
   setup() {
-    // TODO mobile 換頁效果還沒做
     const title = ref('Your Dream Destination: Be who you want to be')
     const commercials = reactive([
       {
@@ -52,5 +78,12 @@ export default {
       commercials,
     }
   },
-}
+})
 </script>
+
+<style lang="postcss" scoped>
+.carousel {
+  margin: 0;
+  width: 100%;
+}
+</style>
