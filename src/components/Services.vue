@@ -7,11 +7,15 @@
     >
       Experiences
     </div>
-    <div class="flex flex-row justify-between">
-      <div
+    <Carousel
+      :settings="settings"
+      :breakpoints="breakpoints"
+      class="flex flex-row justify-between"
+    >
+      <Slide
         v-for="experience in experiences"
         :key="experience.id"
-        class="flex flex-col w-1/4"
+        class="flex flex-col justify-start items-start w-1/4 pad:mr-8"
       >
         <div class="mb-4 text-2xl font-semibold text-[#222222]">
           {{ experience.title }}
@@ -28,14 +32,39 @@
             Know more about...</a
           >
         </div>
-      </div>
-    </div>
+      </Slide>
+    </Carousel>
   </div>
 </template>
 
 <script>
 import { ref, reactive } from 'vue'
-export default {
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
+import './../assets/carousel.css'
+
+export default defineComponent({
+  components: {
+    Pagination,
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  data: () => ({
+    // carousel settings
+    settings: {
+      itemsToShow: 1,
+      snapAlign: 'center',
+    },
+    // breakpoints are mobile first
+    // any settings not specified will fallback to the carousel settings
+    breakpoints: {
+      743: {
+        itemsToShow: 3,
+        snapAlign: 'center',
+      },
+    },
+  }),
   setup() {
     const experiences = reactive([
       {
@@ -62,5 +91,12 @@ export default {
       experiences,
     }
   },
-}
+})
 </script>
+
+<style lang="postcss" scoped>
+.carousel {
+  margin: 0;
+  width: 100%;
+}
+</style>
