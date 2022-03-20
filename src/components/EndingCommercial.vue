@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="max-w-[1280px] flex flex-col justify-center mx-auto px-6 h-[544px] mobile:h-[684px] pad:h-[541px] pad:px-10 desktop:px-20 bg-[url('/src/assets/_MG_3509.jpeg')] bg-no-repeat bg-cover"
+      class="max-w-[1280px] flex flex-col justify-center mx-auto px-6 h-[544px] mobile:h-[684px] pad:h-[541px] pad:px-10 desktop:px-20 bg-[url('src/assets/_MG_3509.jpeg')] bg-no-repeat bg-cover"
     >
       <div class="text-[32px] font-extrabold text-[#fff] pad:text-[42px]">
         {{ mainTitle }}

@@ -37,6 +37,14 @@ import { ref, reactive } from 'vue'
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
 import './../styles/carousel.css'
+import image27 from '../assets/27.jpg'
+import image31 from '../assets/31.jpg'
+import image34 from '../assets/34.jpg'
+import image39 from '../assets/39.jpg'
+import image59 from '../assets/59.jpg'
+import image60 from '../assets/60.jpg'
+import image62 from '../assets/62.jpg'
+import image64 from '../assets/64.jpg'
 
 export default defineComponent({
   components: {
@@ -72,42 +80,42 @@ export default defineComponent({
     const foodCollection = reactive([
       {
         id: 1,
-        img: './src/assets/27.jpg',
+        img: image27,
         name: 'Bua Loy Bingsu',
       },
       {
         id: 2,
-        img: './src/assets/31.jpg',
+        img: image31,
         name: 'Meatball',
       },
       {
         id: 3,
-        img: './src/assets/34.jpg',
+        img: image34,
         name: 'Seafood with coconut',
       },
       {
         id: 4,
-        img: './src/assets/39.jpg',
+        img: image39,
         name: 'Krapaw Moo',
       },
       {
         id: 5,
-        img: './src/assets/59.jpg',
+        img: image59,
         name: 'Kao Man Gai',
       },
       {
         id: 6,
-        img: './src/assets/60.jpg',
+        img: image60,
         name: 'Kai Luk Khey',
       },
       {
         id: 7,
-        img: './src/assets/62.jpg',
+        img: image62,
         name: 'Chim Chum',
       },
       {
         id: 8,
-        img: './src/assets/64.jpg',
+        img: image64,
         name: 'Moo Bing',
       },
     ])
