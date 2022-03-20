@@ -40,7 +40,7 @@
 import { ref, reactive } from 'vue'
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
-import './../assets/carousel.css'
+import './../styles/carousel.css'
 
 export default defineComponent({
   components: {
@@ -59,35 +59,35 @@ export default defineComponent({
     const users = reactive([
       {
         id: 1,
-        avatar: 'bg-[url(/public/Catherine.jpeg)]',
+        avatar: 'bg-[url(/src/assets/Catherine.jpeg)]',
         text: 'I think Bangkok and all another place in thailand have nice, beautiful, interresting, relaxing, tasty, friendly and many more parts and place...',
         name: 'Catherine',
         from: 'California, United States',
       },
       {
         id: 2,
-        avatar: 'bg-[url(/public/Amanda.jpeg)]',
+        avatar: 'bg-[url(/src/assets/Amanda.jpeg)]',
         text: 'I loved it, Bangkok has so much hidden gems like this ! A must see in Bangkok, try to come early morning to avoid the groups...',
         name: 'Amanda',
         from: 'Paris, France',
       },
       {
         id: 3,
-        avatar: 'bg-[url(/public/Andrew.jpeg)]',
+        avatar: 'bg-[url(/src/assets/Andrew.jpeg)]',
         text: 'There are some other wonderful beaches on this Island but this one is a sure bet, especially with some of the best resorts located right on it.',
         name: 'Andrew',
         from: 'London, Britain',
       },
       {
         id: 4,
-        avatar: 'bg-[url(/public/Robert.jpeg)]',
+        avatar: 'bg-[url(/src/assets/Robert.jpeg)]',
         text: 'we loved this beach and also white sands but we preferred white sands because it had too many options for bar restaurants shop around the beach. ',
         name: 'Robert',
         from: 'Georgia, United States',
       },
       {
         id: 5,
-        avatar: 'bg-[url(/public/Mia.jpeg)]',
+        avatar: 'bg-[url(/src/assets/Mia.jpeg)]',
         text: 'Places to see, ways to wander, and signature experiences.',
         name: 'Mia',
         from: 'Warsaw, Poland',

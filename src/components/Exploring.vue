@@ -3,7 +3,7 @@
     class="max-w-[1280px] h-[544px] my-6 mx-0 mobile:h-[684px] pad:h-[464px] pad:my-8 pad:mx-10 pad:rounded-2xl desktop:my-12 desktop:mx-20 max:mx-auto"
   >
     <div
-      class="flex flex-col justify-evenly w-full h-full pad:rounded-2xl bg-[url('/public/IMG_0289.jpeg')] bg-no-repeat bg-cover"
+      class="flex flex-col justify-evenly w-full h-full pad:rounded-2xl bg-[url('/src/assets/IMG_0289.jpeg')] bg-no-repeat bg-cover"
     >
       <div class="text-xs font-bold text-[#fff] px-6 pad:text-lg">
         {{ slogan }}

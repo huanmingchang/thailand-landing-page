@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="max-w-[1280px] flex flex-col justify-center pb-16 px-6 mx-auto h-[544px] mobile:justify-end mobile:h-[684px] mobile:pb-0 pad:justify-center pad:h-[541px] pad:px-10 desktop:px-20 bg-[url('/public/IMG_0513.JPG')] bg-no-repeat bg-cover"
+      class="max-w-[1280px] flex flex-col justify-center pb-16 px-6 mx-auto h-[544px] mobile:justify-end mobile:h-[684px] mobile:pb-0 pad:justify-center pad:h-[541px] pad:px-10 desktop:px-20 bg-[url('src/assets/IMG_0513.JPG')] bg-no-repeat bg-cover"
     >
       <div class="text-xs font-bold text-[#fff] mb-3 pad:text-lg">
         {{ slogan }}
@@ -27,7 +27,6 @@
 <script>
 import { ref, reactive } from 'vue'
 export default {
-  // TODO 修改背景圖片超過 1280px 的效果
   setup() {
     const slogan = ref('Amazing Thailand')
     const mainTitle = ref('Reopen, Revive, Revisit')
