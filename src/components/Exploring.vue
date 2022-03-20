@@ -47,11 +47,10 @@ export default {
 
 <style lang="postcss" scoped>
 .btn:hover {
-  transform: scale(1.05);
+  @apply scale-105;
 }
 
 .btn:active {
-  transform: scale(1);
-  box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  @apply scale-105 shadow-2xl;
 }
 </style>

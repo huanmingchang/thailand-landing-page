@@ -2,7 +2,7 @@
   <div
     class="flex flex-col max-w-[1280px] my-6 mx-12 pad:mx-10 pad:my-8 desktop:mx-20 desktop:my-12 max:mx-auto"
   >
-    <div class="text-[26px] text-[#222222] font-extrabold mb-6 pad:text-[42px]">
+    <div class="text-[32px] text-[#222222] font-extrabold mb-6 pad:text-[46px]">
       Food
     </div>
     <div class="flex flex-row justify-between">
@@ -121,7 +121,6 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .carousel {
-  margin: 0;
-  width: 100%;
+  @apply m-0 w-full;
 }
 </style>
